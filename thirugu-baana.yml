@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: thirugu-baana
+spec:
+  containers:
+  - name: thirugu-baana
+    image: abhijith/thirugu-baana:0.0.1-SNAPSHOT
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 8080

@@ -4,4 +4,4 @@ ADD *.jar /app/
 
 ENV PATH /app:$PATH
 
-CMD java -Xmx1G -Xms1G -jar /app/*.jar
+CMD java -Xmx256m -Xms256m -jar /app/*.jar
