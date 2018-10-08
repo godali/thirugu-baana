@@ -23,7 +23,9 @@ start() {
             exit -1
     esac
 
-    sudo docker run \
+    docker run \
+        -d \
+        --rm \
         -p 8080:8080 \
         --name "$service_container_name" \
         "${run_mode_flag}" \
@@ -31,7 +33,7 @@ start() {
 }
 
 stop() {
-    sudo docker rm -f "${service_container_name}" || true
+    docker rm -f "${service_container_name}" || true
 }
 
 restart() {

@@ -1,6 +1,6 @@
-FROM openjdk:8u141-jdk
+FROM openjdk:11-jdk
 RUN mkdir -p /app/
-ADD *.jar /app/
+COPY *.jar /app/
 
 ENV PATH /app:$PATH
 
