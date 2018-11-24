@@ -16,6 +16,7 @@ apply plugin: 'application'
 apply plugin: 'docker'
 
 version = '0.0.1-SNAPSHOT'
+springBootVersion = '2.1.0.RELEASE'
 sourceCompatibility = 1.11
 targetCompatibility = 1.11
 mainClassName = 'com.godali.thirugubaana.ThirugubaanaApplication'
@@ -27,10 +28,10 @@ repositories {
 group = "abhijith"
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-dependencies:2.0.5.RELEASE'
-    implementation 'org.springframework.boot:spring-boot-starter-web:2.0.5.RELEASE'
+    implementation "org.springframework.boot:spring-boot-dependencies:${springBootVersion}"
+    implementation "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
 
-    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.0.5.RELEASE'
+    testImplementation "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
 
     testCompile('org.testng:testng:6.14.3')
 }
